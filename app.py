@@ -108,6 +108,7 @@ def main():
         st.write("Upload a .csv or .xlsx file to get started")
         return
     df = get_df(file)
+    st.sidebar.image('Logo.png',width=250)
     task = st.sidebar.radio('Task', ['Explore', 'Transform','Profile Report'], 0)
     if task == 'Explore':
         explore(df)
